@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:onlineoperation/screen/realtimeOrder.dart';
 
 class EntryScreen extends StatelessWidget {
   const EntryScreen({super.key});
@@ -19,8 +20,8 @@ class EntryScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50),
                 color: Colors.white,
               ),
-              width: 450,
-              height: 450,
+              width: 400,
+              height: 400,
               child: Column(
                 children: [
                   SizedBox(
@@ -31,17 +32,17 @@ class EntryScreen extends StatelessWidget {
                     children: [
                       Image.asset(
                         'asset/image/liv_farm_front.jpeg',
-                        width: 300.0,
-                        height: 300.0,
+                        width: 250.0,
+                        height: 250.0,
                       )
                     ],
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 30,
                   ),
                   Text("livFarm Online Order",
                       style: TextStyle(
-                          fontSize: 40,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Lato')),
                 ],
@@ -60,30 +61,34 @@ class EntryScreen extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/segok');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RealTimeOrder()),
+                      );
                     },
                     child: Column(
                       children: [
                         SizedBox(
                           height: 30,
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(100.0),
-                          child: Image.asset(
-                            'asset/image/liv_farm_segok.png',
-                            width: 170.0,
-                            height: 170.0,
-                            fit: BoxFit.cover,
-                          ),
+                        Container(
+                          height: 170,
+                          width: 170,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  width: 5),
+                              shape: BoxShape.circle),
+                          child: Text("세곡점",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold)),
                         ),
                         SizedBox(
-                          height: 20,
-                        ),
-                        Text("세곡점",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold)),
-                        SizedBox(
-                          height: 20,
+                          height: 40,
                         ),
                       ],
                     ),
@@ -91,30 +96,69 @@ class EntryScreen extends StatelessWidget {
                   SizedBox(width: 50),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/kyodae');
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RealTimeOrder()),
+                      );
                     },
                     child: Column(
                       children: [
                         SizedBox(
                           height: 30,
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(100.0),
-                          child: Image.asset(
-                            'asset/image/liv_farm_kyodae.png',
-                            width: 170.0,
-                            height: 170.0,
-                            fit: BoxFit.cover,
-                          ),
+                        Container(
+                          height: 170,
+                          width: 170,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  width: 5),
+                              shape: BoxShape.circle),
+                          child: Text("교대점",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold)),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 40,
                         ),
-                        Text("교대점",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 50),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RealTimeOrder()),
+                      );
+                    },
+                    child: Column(
+                      children: [
                         SizedBox(
-                          height: 20,
+                          height: 30,
+                        ),
+                        Container(
+                          height: 170,
+                          width: 170,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: Colors.black,
+                                  style: BorderStyle.solid,
+                                  width: 5),
+                              shape: BoxShape.circle),
+                          child: Text("방배점",
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold)),
+                        ),
+                        SizedBox(
+                          height: 40,
                         ),
                       ],
                     ),

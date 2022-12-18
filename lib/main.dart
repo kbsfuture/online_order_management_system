@@ -10,15 +10,15 @@ import 'package:onlineoperation/screen/segok_soldout.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: "/",
-    routes: {
-      '/': (context) => EntryScreen(),
-      '/segok': (context) => SegokScreen(),
-      '/segok/history': (context) => SegokHistory(),
-      '/segok/soldout': (context) => SegokSoldout(),
-      '/kyodae': (context) => KyodaeScreen(),
-      '/kyodae/history': (context) => KyodaeHistory(),
-      '/kyodae/soldout': (context) => KyodaeSoldout(),
-    },
+    home: EntryScreen(),
+// routes: {
+//       '/': (context) => EntryScreen(),
+//       '/segok': (context) => SegokScreen(),
+//       '/segok/history': (context) => SegokHistory(),
+//       '/segok/soldout': (context) => SegokSoldout(),
+//       '/kyodae': (context) => KyodaeScreen(),
+//       '/kyodae/history': (context) => KyodaeHistory(),
+//       '/kyodae/soldout': (context) => KyodaeSoldout(),
+    // },
   ));
 }
